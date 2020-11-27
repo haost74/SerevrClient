@@ -51,7 +51,7 @@ namespace Lee
             {
                 Dispatcher.BeginInvoke((ThreadStart)delegate ()
                 {
-                    GetDataContext.Data += msg + "\r\n";
+                    //GetDataContext.Data += msg + "\r\n";
                 });
             };
 
@@ -64,8 +64,8 @@ namespace Lee
                     {
                         if(GetDataContext != null && GetDataContext.ListClients != null)
                         GetDataContext.ListClients.Add(client.Cleent);
-                        if (GetDataContext.ListClients.Count == 1)
-                            GetDataContext.Client = GetDataContext.ListClients[0];
+                        //if (GetDataContext.ListClients.Count == 1)
+                        //    GetDataContext.Client = GetDataContext.ListClients[0];
                     });
                 }
                 else if (client.TypeObservable == "delete")
@@ -77,9 +77,11 @@ namespace Lee
                             if(GetDataContext.ListClients.Contains(client.Cleent))
                             GetDataContext.ListClients.Remove(client.Cleent);
 
-                            if(GetDataContext.Client == null && GetDataContext.ListClients.Count > 0)
-                                GetDataContext.Client = GetDataContext.ListClients[0];
+                            //if(GetDataContext.Client == null && GetDataContext.ListClients.Count > 0)
+                            //    GetDataContext.Client = GetDataContext.ListClients[0];
 
+                            if (GetDataContext.ListClients == null || GetDataContext.ListClients.Count == 0 && CMsg.Visibility == Visibility.Visible)
+                                CMsg.Visibility = Visibility.Collapsed;
                         }
                     });
                 }
@@ -92,7 +94,12 @@ namespace Lee
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            
+            if (CMsg.Visibility == Visibility.Collapsed && GetDataContext.Client != null && GetDataContext.Client.workSocket != null &&
+                GetDataContext.Client.workSocket.Connected)
+                CMsg.Visibility = Visibility.Visible;
+            else if (CMsg.Visibility == Visibility.Visible)
+                CMsg.Visibility = Visibility.Collapsed;
         }
     }
 }

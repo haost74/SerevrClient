@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cmsg="clr-namespace:Lee.Controls"
         xmlns:local="clr-namespace:Lee"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
@@ -69,6 +70,7 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -102,5 +104,7 @@
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="3" x:Name="msgText" Text="{Binding Msg}"/>
         </Grid>
+    </Grid>
+        <cmsg:MsgClient x:Name="CMsg" Height="250" Width="400" Visibility="Collapsed"/>
     </Grid>
 </Window>

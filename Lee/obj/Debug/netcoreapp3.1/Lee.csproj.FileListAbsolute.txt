@@ -4,7 +4,6 @@ C:\Users\haost\Desktop\Server+Client\Lee\bin\Debug\netcoreapp3.1\Lee.runtimeconf
 C:\Users\haost\Desktop\Server+Client\Lee\bin\Debug\netcoreapp3.1\Lee.runtimeconfig.dev.json
 C:\Users\haost\Desktop\Server+Client\Lee\bin\Debug\netcoreapp3.1\Lee.dll
 C:\Users\haost\Desktop\Server+Client\Lee\bin\Debug\netcoreapp3.1\Lee.pdb
-C:\Users\haost\Desktop\Server+Client\Lee\obj\Debug\netcoreapp3.1\Lee.csprojAssemblyReference.cache
 C:\Users\haost\Desktop\Server+Client\Lee\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\haost\Desktop\Server+Client\Lee\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\haost\Desktop\Server+Client\Lee\obj\Debug\netcoreapp3.1\Lee_MarkupCompile.cache
@@ -20,3 +19,7 @@ C:\Users\haost\Desktop\Server+Client\Lee\obj\Debug\netcoreapp3.1\Lee.genruntimec
 C:\Users\haost\Desktop\Server+Client\Lee\bin\Debug\netcoreapp3.1\ServerSocket.dll
 C:\Users\haost\Desktop\Server+Client\Lee\bin\Debug\netcoreapp3.1\ServerSocket.pdb
 C:\Users\haost\Desktop\Server+Client\Lee\obj\Debug\netcoreapp3.1\Lee.csproj.CopyComplete
+C:\Users\haost\Desktop\Server+Client\Lee\obj\Debug\netcoreapp3.1\Controls\MsgClient.g.cs
+C:\Users\haost\Desktop\Server+Client\Lee\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\haost\Desktop\Server+Client\Lee\obj\Debug\netcoreapp3.1\Controls\MsgClient.baml
+C:\Users\haost\Desktop\Server+Client\Lee\obj\Debug\netcoreapp3.1\Lee.csprojAssemblyReference.cache

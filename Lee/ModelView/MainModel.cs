@@ -47,6 +47,15 @@ namespace Lee.ModelView
             set
             {
                 client = value;
+                if(client != null)
+                {
+                    var temps = client.GetMsgs();
+                    Data = "";
+                    for (int i = 0; i < temps.Count; ++i)
+                    {
+                        Data += temps[i] + "\r\n";
+                    }
+                }
                 OnPropertyChanged();
             }
         }

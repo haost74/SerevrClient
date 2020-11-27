@@ -25,6 +25,15 @@ namespace ServerSocket.src.Server
 
         public bool IsListen = true;
 
+        private List<string> msgs = new List<string>();
+
+        public List<string> GetMsgs(Func<List<string>, List<string>> fun = null)
+        {
+            if (fun != null)
+                return fun(msgs);
+            return msgs;
+        }
+
         public string Client
         {
             get 
@@ -45,8 +54,10 @@ namespace ServerSocket.src.Server
                     try
                     {
                         int receiveNumber = workSocket.Receive(buffer);
-                        Console.WriteLine($@"{workSocket.RemoteEndPoint.ToString()} {Encoding.ASCII.GetString(buffer, 0, receiveNumber)}");
-                        ServerMono.ActionData?.Invoke($@"{workSocket.RemoteEndPoint.ToString()} {Encoding.ASCII.GetString(buffer, 0, receiveNumber)}");
+                        //Console.WriteLine($@"{workSocket.RemoteEndPoint.ToString()} {Encoding.ASCII.GetString(buffer, 0, receiveNumber)}");
+                        string msg = Encoding.ASCII.GetString(buffer, 0, receiveNumber);
+                        ServerMono.ActionData?.Invoke($@"{workSocket.RemoteEndPoint.ToString()} {msg}");
+                        msgs.Add(msg);
                         Send(GuideStr);
                     }
                     catch (Exception ex)
