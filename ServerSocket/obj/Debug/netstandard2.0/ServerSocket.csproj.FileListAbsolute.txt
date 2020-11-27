@@ -1,0 +1,8 @@
+C:\Users\haost\Desktop\Server+Client\ServerSocket\obj\Debug\netstandard2.0\ServerSocket.AssemblyInfoInputs.cache
+C:\Users\haost\Desktop\Server+Client\ServerSocket\obj\Debug\netstandard2.0\ServerSocket.AssemblyInfo.cs
+C:\Users\haost\Desktop\Server+Client\ServerSocket\obj\Debug\netstandard2.0\ServerSocket.csproj.CoreCompileInputs.cache
+C:\Users\haost\Desktop\Server+Client\ServerSocket\bin\Debug\netstandard2.0\ServerSocket.deps.json
+C:\Users\haost\Desktop\Server+Client\ServerSocket\bin\Debug\netstandard2.0\ServerSocket.dll
+C:\Users\haost\Desktop\Server+Client\ServerSocket\bin\Debug\netstandard2.0\ServerSocket.pdb
+C:\Users\haost\Desktop\Server+Client\ServerSocket\obj\Debug\netstandard2.0\ServerSocket.dll
+C:\Users\haost\Desktop\Server+Client\ServerSocket\obj\Debug\netstandard2.0\ServerSocket.pdb

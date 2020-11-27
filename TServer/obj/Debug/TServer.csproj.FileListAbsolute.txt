@@ -1,0 +1,14 @@
+C:\Users\Aleksey.V.Gribkov\source\repos\TServer\bin\Debug\TServer.exe.config
+C:\Users\Aleksey.V.Gribkov\source\repos\TServer\bin\Debug\TServer.exe
+C:\Users\Aleksey.V.Gribkov\source\repos\TServer\bin\Debug\TServer.pdb
+C:\Users\Aleksey.V.Gribkov\source\repos\TServer\obj\Debug\TServer.csprojAssemblyReference.cache
+C:\Users\Aleksey.V.Gribkov\source\repos\TServer\obj\Debug\TServer.csproj.CoreCompileInputs.cache
+C:\Users\Aleksey.V.Gribkov\source\repos\TServer\obj\Debug\TServer.exe
+C:\Users\Aleksey.V.Gribkov\source\repos\TServer\obj\Debug\TServer.pdb
+C:\Users\haost\Desktop\Server+Client\TServer\bin\Debug\TServer.exe.config
+C:\Users\haost\Desktop\Server+Client\TServer\bin\Debug\TServer.exe
+C:\Users\haost\Desktop\Server+Client\TServer\bin\Debug\TServer.pdb
+C:\Users\haost\Desktop\Server+Client\TServer\obj\Debug\TServer.csprojAssemblyReference.cache
+C:\Users\haost\Desktop\Server+Client\TServer\obj\Debug\TServer.csproj.CoreCompileInputs.cache
+C:\Users\haost\Desktop\Server+Client\TServer\obj\Debug\TServer.exe
+C:\Users\haost\Desktop\Server+Client\TServer\obj\Debug\TServer.pdb

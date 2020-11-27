@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TServer", "TServer.csproj", "{D072DFCD-6C8E-479E-A3D4-6886D85323D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerSocket", "..\ServerSocket\ServerSocket.csproj", "{FAC155CC-F310-48B8-8374-70C1DF326869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lee", "..\Lee\Lee.csproj", "{40ED0D37-4B2F-425E-9974-8E0CAF75F4A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D072DFCD-6C8E-479E-A3D4-6886D85323D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D072DFCD-6C8E-479E-A3D4-6886D85323D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D072DFCD-6C8E-479E-A3D4-6886D85323D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D072DFCD-6C8E-479E-A3D4-6886D85323D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC155CC-F310-48B8-8374-70C1DF326869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC155CC-F310-48B8-8374-70C1DF326869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC155CC-F310-48B8-8374-70C1DF326869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC155CC-F310-48B8-8374-70C1DF326869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40ED0D37-4B2F-425E-9974-8E0CAF75F4A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40ED0D37-4B2F-425E-9974-8E0CAF75F4A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40ED0D37-4B2F-425E-9974-8E0CAF75F4A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40ED0D37-4B2F-425E-9974-8E0CAF75F4A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55AE205A-64EF-4DF4-A3C6-26E78DA66D45}
+	EndGlobalSection
+EndGlobal
