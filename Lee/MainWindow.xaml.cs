@@ -27,69 +27,15 @@ namespace Lee
     {
         public MainWindow()
         {
-            DataContext = new MainModel();
+            DataContext = new MainModel(this);
             InitializeComponent();
 
             Loaded += (sender, e) =>
             {
-                StartServer();
+                GetDataContext.StartServer();
             };
         }
-
-        private void StartServer()
-        {
-            ServerMono serverMono = new ServerMono();
-            ServerMono.ActionMsg += (msg) =>
-            {
-                Dispatcher.BeginInvoke((ThreadStart)delegate ()
-                {
-                    GetDataContext.Msg = msg;
-                });
-                
-            };
-            ServerMono.ActionData += (msg) =>
-            {
-                Dispatcher.BeginInvoke((ThreadStart)delegate ()
-                {
-                    //GetDataContext.Data += msg + "\r\n";
-                });
-            };
-
-            ServerMono.ObservableClient += (obj) =>
-            {
-                var client = ((ObservableListClients)obj);
-                if (client.TypeObservable == "add")
-                {
-                    Dispatcher.BeginInvoke((ThreadStart)delegate ()
-                    {
-                        if(GetDataContext != null && GetDataContext.ListClients != null)
-                        GetDataContext.ListClients.Add(client.Cleent);
-                        //if (GetDataContext.ListClients.Count == 1)
-                        //    GetDataContext.Client = GetDataContext.ListClients[0];
-                    });
-                }
-                else if (client.TypeObservable == "delete")
-                {
-                    Dispatcher.BeginInvoke((ThreadStart)delegate ()
-                    {
-                        if (GetDataContext != null && GetDataContext.ListClients != null)
-                        {
-                            if(GetDataContext.ListClients.Contains(client.Cleent))
-                            GetDataContext.ListClients.Remove(client.Cleent);
-
-                            //if(GetDataContext.Client == null && GetDataContext.ListClients.Count > 0)
-                            //    GetDataContext.Client = GetDataContext.ListClients[0];
-
-                            if (GetDataContext.ListClients == null || GetDataContext.ListClients.Count == 0 && CMsg.Visibility == Visibility.Visible)
-                                CMsg.Visibility = Visibility.Collapsed;
-                        }
-                    });
-                }
-            };
-
-            var t = serverMono.CreatedServer();
-        }
-
+        
         public MainModel GetDataContext { get { return (MainModel)DataContext; } }
 
         private void Button_Click(object sender, RoutedEventArgs e)

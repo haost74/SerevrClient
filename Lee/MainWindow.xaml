@@ -93,8 +93,10 @@
                       DisplayMemberPath="Client" SelectedValuePath="Client"/>
         </Grid>
         <Grid Grid.Row="1">
-            <TextBlock x:Name="data" Text="{Binding Data}" TextWrapping="Wrap" Padding="5" Background="#fffde7"/>
-        </Grid>
+                <ScrollViewer>
+                    <TextBlock x:Name="data" Text="{Binding Data}" TextWrapping="Wrap" Padding="5" Background="#fffde7"/>
+                </ScrollViewer>
+            </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -102,7 +104,9 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="3" x:Name="msgText" Text="{Binding Msg}"/>
+                
+                <TextBlock Grid.Column="3" x:Name="msgText" Text="{Binding Msg}"/>
+                
         </Grid>
     </Grid>
         <cmsg:MsgClient x:Name="CMsg" Height="250" Width="400" Visibility="Collapsed"/>
