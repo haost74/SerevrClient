@@ -16,6 +16,7 @@ using ServerSocket;
 
 namespace Lee
 {
+    using Lee.Controls;
     using Lee.ModelView;
     using ServerSocket.src.Server;
     using System.Threading;
@@ -40,12 +41,17 @@ namespace Lee
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+
             if (CMsg.Visibility == Visibility.Collapsed && GetDataContext.Client != null && GetDataContext.Client.workSocket != null &&
                 GetDataContext.Client.workSocket.Connected)
+            {
+                CMsg.GetDataContext.Init(GetDataContext.Client);
                 CMsg.Visibility = Visibility.Visible;
+            }
             else if (CMsg.Visibility == Visibility.Visible)
+            {
                 CMsg.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }

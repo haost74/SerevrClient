@@ -5,12 +5,32 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Lee.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="250" d:DesignWidth="400">
+             d:DesignHeight="350" d:DesignWidth="550">
     <Grid>
         <Border CornerRadius="8" BorderBrush="AliceBlue" Background="#f2f2f2">
-            <Border.Effect>
-                <DropShadowEffect Color="#b4b4b4"/>
-            </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="1" Text="{Binding CustomerName}" HorizontalAlignment="Center"/>
+                <TextBox Grid.Row="3" Text="{Binding MsgToServer}"/>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                   <Button Grid.Column="4" Content="SEND" Click="Button_Send" Width="76"/>
+                </Grid>
+            </Grid>
         </Border>
     </Grid>
 </UserControl>

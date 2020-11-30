@@ -20,8 +20,15 @@ namespace Lee.Controls
     {
         public MsgClient()
         {
+            DataContext = new MsgClientModel();
             InitializeComponent();
             IsVisibleChanged += ScheduleUserControl_IsVisibleChanged;
+        }
+
+
+        public MsgClientModel GetDataContext
+        {
+            get { return (MsgClientModel)DataContext; }
         }
 
         private void ScheduleUserControl_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
@@ -33,6 +40,11 @@ namespace Lee.Controls
             {
 
             }
+        }
+
+        private void Button_Send(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

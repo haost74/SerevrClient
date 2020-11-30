@@ -74,8 +74,9 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
@@ -96,8 +97,8 @@
                 <ScrollViewer>
                     <TextBlock x:Name="data" Text="{Binding Data}" TextWrapping="Wrap" Padding="5" Background="#fffde7"/>
                 </ScrollViewer>
-            </Grid>
-        <Grid Grid.Row="2">
+        </Grid>
+        <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
