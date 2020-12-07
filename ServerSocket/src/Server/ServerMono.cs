@@ -76,7 +76,8 @@ namespace ServerSocket.src.Server
         {
             try
             {
-                byte[] msg = Encoding.ASCII.GetBytes(msgStr);
+                var dt = System.DateTime.Now.ToString("dd.MM.yyyy HH.mm.ss");
+                byte[] msg = Encoding.ASCII.GetBytes(dt + " " + msgStr);
                 if (workSocket.Connected)
                 {
                     int bytesSent = workSocket.Send(msg);
@@ -85,7 +86,7 @@ namespace ServerSocket.src.Server
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                throw;
             }
         }
     }

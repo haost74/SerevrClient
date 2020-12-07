@@ -18,6 +18,11 @@ namespace ServerSocket.src.Client
             }
         }
 
+        public bool IsConnected
+        {
+            get { return sender != null ? sender.Connected : false; }
+        }
+
         public string Address { get; protected set; }
         public int Port { get; protected set; }
 
@@ -25,6 +30,29 @@ namespace ServerSocket.src.Client
         {
             Address = address;
             Port = port;
+        }
+
+        public void Send(string msg, Action<string> outRes)
+        {
+            if (sender != null && IsConnected)
+            {
+            byte[] bytes = new byte[1024];
+                try
+                {
+                    byte[] arr = Encoding.ASCII.GetBytes(msg);
+                    sender.Send(arr);
+
+                    int bytesRec = sender.Receive(bytes);
+                    Console.WriteLine("Echoed test = {0}",
+                        Encoding.ASCII.GetString(bytes, 0, bytesRec));
+                    outRes?.Invoke(Encoding.ASCII.GetString(bytes, 0, bytesRec));
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
         }
 
         public void StartClient(string msgStr, Action<string> outRes)

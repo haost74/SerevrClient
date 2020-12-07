@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServerSocket.src.Server;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -44,7 +45,10 @@ namespace Lee.Controls
 
         private void Button_Send(object sender, RoutedEventArgs e)
         {
-
+            if(GetDataContext.Client != null && GetDataContext.Client.workSocket != null && !string.IsNullOrEmpty(GetDataContext.MsgToServer))
+            {
+                GetDataContext.Client.Send(GetDataContext.MsgToServer);
+            }
         }
     }
 }

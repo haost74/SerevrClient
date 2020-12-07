@@ -19,9 +19,21 @@ namespace Lee.Controls
         }
         #endregion
 
+        private DataServer client = new DataServer();
+        public DataServer Client
+        {
+            get { return client; }
+            set
+            {
+                client = value;
+                OnPropertyChanged();
+            }
+        }
+
         public void Init(DataServer ds)
         {
             CustomerName = ds.workSocket.RemoteEndPoint.ToString();
+            Client = ds;
         }
 
         private string customerName = "";
